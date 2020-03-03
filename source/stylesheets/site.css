@@ -61,10 +61,6 @@ body {
   font-family: Source Sans Pro, sans-serif;
 }
 
-h2 {
-  font-size: 2em;
-}
-
 a {
   text-decoration: none;
 }
@@ -72,6 +68,10 @@ a {
 a:hover, a:hover *, nav a:hover {
   color: pink;
   animation: rainbow 1.8s infinite;
+}
+
+h2 {
+  font-size: 40px;
 }
 
 /* Banner */
@@ -152,7 +152,14 @@ a:hover, a:hover *, nav a:hover {
 /* Sections */
 
 section.content {
-  padding: 50px 0;
+  padding: 70px 0;
+}
+
+section.content h2 {
+  padding: 0;
+}
+
+section.header {
 }
 
 .inner {
@@ -176,12 +183,28 @@ header.major h2::after {
 }
 
 header.major h2 {
-  padding: 1em 0;
+  padding: 0 0 1em 0;
 }
 
 header.major p {
   font-size: 1.15em;
   padding-bottom: 3em;
+}
+
+.card {
+  background: linear-gradient(-70deg, #fa7c30 30%, rgba(0, 0, 0, 0) 30%), url('/images/doctor1-500.jpg');
+  font-size: 3em;
+  height: 350px;
+  
+  vertical-align: middle;
+}
+
+.bg-doctor1 {
+  text-align: right;
+}
+
+.highlight {
+  color: #21fcdd;
 }
 
 .style1 {
