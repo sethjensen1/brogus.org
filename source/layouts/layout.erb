@@ -7,12 +7,15 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
-    <script src="https://kit.fontawesome.com/c6eb202347.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
     <script src="https://kit.fontawesome.com/2a981677ba.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <%= javascript_include_tag "navbutton" %>
   </head>
   <body>
+    <%= partial "partials/navbar" %>
     <%= yield %>
+    <%= partial "partials/footer" %>
   </body>
 </html>

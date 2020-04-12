@@ -122,6 +122,149 @@ p {
   font-size: 17px;
 }
 
+a {
+  text-decoration: none;
+}
+
+
+/* Navbar */
+
+#navbar {
+  background-color: #000;
+  width: 100%;
+  position: fixed;
+  height: 50px;
+  z-index: 999;
+}
+
+#navbar li {
+  top: 0;
+  float: left;
+  padding: 0;
+  display: block;
+}
+
+.navbar-list {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-items {
+  padding: 15px 15px;
+}
+
+nav a {
+  color: white;
+  display: block;
+}
+
+#mobile-nav {
+  background-color: black;
+  height: 0;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+#navbar h3 {
+  text-align: center;
+  margin: 0;
+  padding: 14px 15px 14px 0;
+  font-weight: normal;
+  display: none;
+}
+
+.active {
+  background-color: pink;
+  color: white;
+  font-weight: bold;
+}
+
+#navbar-list #title {
+  letter-spacing: .25em;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 15px;
+  height: 20px;
+}
+
+/* Animated nav button */
+
+#nav-button {
+  margin: 8px 0 0 20px;
+  width: 50px;
+  height: 45px;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  display: none;
+}
+
+#nav-button span {
+  position: absolute;
+  display: block;
+  margin: 7px 0;
+  height: 6px;
+  width: 75%;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-button span:nth-child(1) {
+  top: 6px;
+}
+
+#nav-button span:nth-child(2) {
+  top: 16px;
+}
+
+#nav-button span:nth-child(3) {
+  top: 26px;
+}
+
+#nav-button.open span:nth-child(1) {
+  top: 16px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-button.open span:nth-child(2) {
+  top: 16px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+#nav-button.open span:nth-child(3) {
+  top: 16px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
 /* Banner */
 
 #banner {
@@ -199,8 +342,12 @@ p {
 
 /* Sections */
 
-.section {
-  padding: 100px 25%;
+#one {
+  padding: 30px 25% 65px 25%;
+}
+
+#two {
+  padding: 30px 25% 65px 15%;
 }
 
 .section_title {
@@ -262,20 +409,28 @@ p {
   opacity: 1;
 }
 
-.block_doctor1 {
-  background-image: url('/images/doctors1.jpg');
+.doctor1 {
+  background-image: url('/images/doctor1.jpg');
 }
 
-.block_doctor1:after {
+.doctor1:after {
   content: '\f46b';
 }
 
-.block_doctor2 {
-  background-image: url('/images/doctor5-500.jpg');
+.doctor2 {
+  background-image: url('/images/doctor2.jpg');
 }
 
-.block_doctor2:after {
+.doctor2:after {
   content: '\f3fd';
+}
+
+.doctor3 {
+  background-image: url('/images/doctor3.jpg');
+}
+  
+.doctor3:after {
+  content: '\f487';
 }
 
 .block_text {
@@ -284,4 +439,51 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* Footer */
+
+.footer {
+  text-align: center;
+}
+
+/* Tablets */
+
+@media (max-width:1023px) {
+
+  #mobile-nav #title {
+    display: none;
+  }
+
+  #mobile-nav {
+    overflow: hidden;
+    height: 0;
+  }
+
+  #mobile-nav.mobile-nav-open {
+    overflow: visible;
+    height: auto;
+  }
+
+  #navbar {
+    position: fixed;
+    height: 66px;
+  }
+
+  #navbar li {
+    float: none;
+  }
+  
+  #navbar h3 {
+    display: block;
+    font-size: 28px;
+    padding: 15px  }
+
+  #nav-button {
+    display: block;
+  }
+}
+
+/* Smartphones */
+@media (max-width:767px) {
 }
