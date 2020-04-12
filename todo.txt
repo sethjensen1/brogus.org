@@ -1,0 +1,4 @@
+add pages
+basic mobile styling
+Switch navbar to flex
+make navbar transparent (EP site style) when on banner
