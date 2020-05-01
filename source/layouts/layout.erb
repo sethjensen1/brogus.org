@@ -15,7 +15,9 @@
   </head>
   <body>
     <%= partial "partials/navbar" %>
-    <%= yield %>
-    <%= partial "partials/footer" %>
+    <div id="content">
+      <%= yield %>
+      <%= partial "partials/footer" %>
+    </div>
   </body>
 </html>

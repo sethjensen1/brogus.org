@@ -10,11 +10,11 @@
   <!-- desktop & mobile -->
   <div id="mobile-nav">
     <ul class="navbar-list">
-      <li><a id="title" href="/">brogus.org</a></li>
+      <li><%= link_to 'brogus.org', '/', :class => 'navbar-title' %></li>
       <li><%= link_to 'Home', '/', :class => 'navbar-items mobile-only' %></li>
       <li><%= link_to 'Brogal Implants', '/implants', :class => 'navbar-items' %></li>
-      <li><%= link_to 'Seepage and Discharge', '/seepage_and_discharge', :class => 'navbar-items' %></li>
-      <li><%= link_to 'Our Team', '/team', :class => 'navbar-items' %></li>
+      <li><%= link_to 'Health', '/health', :class => 'navbar-items' %></li>
+      <li><%= link_to 'Speed', '/speed', :class => 'navbar-items' %></li>
       <li><%= link_to 'About Us', '/about', :class => 'navbar-items' %></li>
       <li><%= link_to 'Contact Us', '/contact', :class => 'navbar-items' %></li>
     </ul>
