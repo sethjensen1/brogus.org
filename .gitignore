@@ -1,4 +1,6 @@
-build
+public/
+resources/
+tmp/
 *~
 *.swp
 .ruby-version

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title || "| brogus.space" %></title>
+    <%= stylesheet_link_tag 'tiles' %>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.tile').click(function(){
+            $('.tile').not(this).removeClass('open');
+            $(this).toggleClass('open');
+            //$('#mobile-nav').toggleClass('mobile-nav-open');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+  <footer>
+    <hr />
+    <p>©2017 Brogus Consultants, LLC</p>
+  </footer>
+</html>

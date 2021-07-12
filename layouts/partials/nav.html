@@ -1,0 +1,22 @@
+<nav id="navbar">
+
+	<!-- mobile -->
+	<div id="nav-button">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<h3>brogus.org</h3>
+
+	<!-- desktop & mobile -->
+	<div id="mobile-nav">
+		<ul class="navbar-list">
+			<li><a id="title" href="/">brogus.org</a></li>
+			<li><a href="/" class="navbar-items mobile-only">Home</a></li>
+			{{ $currentPage := . }}
+			{{ range .Site.Menus.main }}
+				<li><a href="{{ .URL }}" class="navbar-items{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">{{ .Title }}</a></li>
+			{{ end }}
+		</ul>
+	</div>
+</nav>

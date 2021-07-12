@@ -1,0 +1,172 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0 250px 40px 250px;
+}
+
+a {
+  text-decoration: underline dotted;
+  color: #fff;
+  font-size: 1.25em;
+  transition: .5s ease;
+}
+
+a:hover {
+  color: #00ffbc;
+}
+
+hr {
+  border-top: 1px;
+}
+
+footer hr {
+  margin-top: 50px;
+}
+
+.details {
+  opacity: 0;
+  max-height: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.tile:hover .details {
+  max-height: 15em;
+  opacity: 1;
+}
+
+.details h2, .details p {
+  margin: 0;
+}
+
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -2.5em 0 0 -2.5em;
+}
+
+.tile {
+  position: relative;
+  width: calc(33.3333% - 2.5em);
+  margin: 2.5em 0 0 2.5em;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.tile > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  z-index: 3;
+}
+
+.tile > div h2, .tile > div p {
+  padding: 0 .5em;
+}
+
+.tile-image {
+  display: block;
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.tile-image img {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+}
+
+.tile.style1 > .tile-image::before {
+  background: #c75b9b;
+}
+
+.tile.style2 > .tile-image::before {
+  background: #8499e7;
+}
+
+.tile.style3 > .tile-image::before {
+  background: #ae85ca;
+}
+
+.tile.style4 > .tile-image::before {
+  background: #72c2b3;
+}
+
+.tile.style5 > .tile-image::before {
+  background: #ca5656;
+}
+
+.tile.style6 > .tile-image::before {
+  background: #35b0ff;
+}
+
+.tile:hover > .tile-image::before {
+  background: #563927;
+  opacity: .35;
+}
+
+.tile-image::before {
+  transition: background-color 0.5s ease, opacity 0.5s ease;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  opacity: 1;
+}
+
+.tile-image::after {
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/ribbon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.35;
+  z-index: 2;
+}
+
+.tile:hover {
+  transform: scale(1.1);
+}
+
+.tile:hover .tile-image::after {
+  opacity: 0;
+}
+
+/* Tablets */
+@media(max-width:1023px) {
+  body {
+    padding: 0 1.25em 1.25em 1.25em;
+  }
+
+  .tiles {
+    margin: 0;
+  }
+
+  .tile {
+    width: 100%;
+    margin: 2.25em 0 0 0;
+  }
+}

@@ -1,0 +1,12 @@
+{{ define "content" }}
+<div id="header">
+  <h1>{{ or (.Params.tagline | safeHTML ) .Title }}</h1>
+  {{ with .Params.subtitle }}
+    <h2>{{ . }}</h2>
+  {{ end }}
+</div>
+
+<div class="content">
+  {{ .Content }}
+</div>
+{{ end }}
