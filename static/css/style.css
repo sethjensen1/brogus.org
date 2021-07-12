@@ -95,9 +95,7 @@ footer p {
 #header {
   width: 100%;
   text-align: center;
-  background-image: url(/images/space2.jpg);
-  background-size: 100%;
-  background-position: 0 -150px;
+  background: 0 20% / cover url(/images/space2.jpg);
   padding: 75px 0 55px 0;
 }
 
@@ -138,6 +136,8 @@ footer p {
 .active {
   color: white;
   font-weight: bold;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .active.space0 {
@@ -178,7 +178,7 @@ footer p {
 
 a#title {
   letter-spacing: .25em;
-  background: url('/images/space-small-8.jpg') -75px -25px;
+  background: top / cover url('/images/space-small-8.jpg');
   color: black;
   font-weight: bold;
   font-size: 18px;

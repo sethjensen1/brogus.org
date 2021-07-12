@@ -1,3 +1,6 @@
 baseURL: http://brogus.org
 languageCode: "en-us"
 title: Brogus.org
+disablekinds:
+- taxonomy
+- term
